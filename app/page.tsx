@@ -93,7 +93,7 @@ export default function Home() {
                     <Star className="size-4 text-green-600 fill-green-600" />
                     <Star className="size-4 text-green-600 fill-green-600" />
                   </div>
-                  
+
                   <p>
                     <span className="font-semibold">1,250</span> happy
                     customers.
