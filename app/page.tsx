@@ -26,7 +26,7 @@ export default function Home() {
               </h1>
               <p className="mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
                 Capture your favorite memories with your own{" "}
-                <span className="font-semibold">one-of-one</span> phone case.
+                <span className="font-semibold">one-of-one</span> phone case,
                 Casecobra allows you to protect your memories, not just your
                 phone case.
               </p>
@@ -34,15 +34,15 @@ export default function Home() {
               <ul className="mt-8 space-y-2 text-left font-medium flex flex-col items-center sm:items-start">
                 <li className="flex gap-1.5 items-center text-left">
                   <Check className="size-5 shrink-0 text-green-600" />
-                  High-quality, durable casses
+                  High-quality, durable casses.
                 </li>
                 <li className="flex gap-1.5 items-center text-left">
                   <Check className="size-5 shrink-0 text-green-600" />5 year
-                  print guarantee
+                  print guarantee.
                 </li>
                 <li className="flex gap-1.5 items-center text-left">
                   <Check className="size-5 shrink-0 text-green-600" />
-                  Mordern iPhone models supported
+                  Mordern iPhone models supported.
                 </li>
               </ul>
 
