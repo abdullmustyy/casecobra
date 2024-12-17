@@ -20,8 +20,7 @@ const Page = async ({ searchParams }: PageProps) => {
   });
 
   if (!configuration) {
-    throw new Error("Configuration not found");
-    // return notFound();
+    return notFound();
   }
 
   const { imageUrl, width, height } = configuration;
