@@ -41,14 +41,14 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
     totalPrice += PRODUCT_PRICES.material.polycarbonate;
   if (finish === "textured") totalPrice += PRODUCT_PRICES.finish.textured;
 
-  const { mutate: createPaymentSession } = useMutation({
+  const { mutate: createPaymentSession, isPending } = useMutation({
     mutationKey: ["get-checkout-session"],
     mutationFn: createCheckoutSession,
     onSuccess: ({ url }) => {
       if (url) router.push(url);
       else throw new Error("Unable to retrieve payment URL.");
     },
-    onError: () => {
+    onError: (error) => {
       toast({
         title: "Something went wrong",
         description: "There was an error on our end. Please try again.",
@@ -115,7 +115,7 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
               <p className="font-medium text-zinc-950">Materials</p>
               <ol className="mt-3 text-zinc-700 list-disc list-inside">
                 <li>High-quality, durable material</li>
-                <li>Scratch- and fingerprint resistant coating</li>
+                <li>Scratch and fingerprint resistant coating</li>
               </ol>
             </div>
           </div>
@@ -162,9 +162,11 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
             <div className="mt-8 flex justify-end pb-12">
               <Button
                 onClick={() => handleCheckout()}
+                isLoading={isPending}
                 className="px-4 sm:px-6 lg:px-8"
               >
-                Check out <ArrowRight className="h-4 w-4 ml-1.5 inline" />
+                <span>Check out</span>
+                {!isPending && <ArrowRight className="h-4 w-4 ml-1.5 inline" />}
               </Button>
             </div>
           </div>
