@@ -19,7 +19,7 @@ const OrderReceivedEmail = ({
   orderId,
   orderDate,
 }: {
-  shippingAddress: ShippingAddress;
+  shippingAddress: Partial<ShippingAddress>;
   orderId: string;
   orderDate: string;
 }) => {
@@ -101,20 +101,20 @@ const OrderReceivedEmail = ({
   );
 };
 
-OrderReceivedEmail.PreviewProps = {
-  shippingAddress: {
-    name: "42a, Cole street, Ojuelegba, Surulere",
-    id: "2",
-    street: "Cole St",
-    city: "Surulere",
-    postalCode: "2222",
-    country: "Nigeria",
-    state: "Lagos",
-    phoneNumber: "222222222222",
-  },
-  orderId: "888888",
-  orderDate: "20/12/24",
-};
+// OrderReceivedEmail.PreviewProps = {
+//   shippingAddress: {
+//     name: "42a, Cole street, Ojuelegba, Surulere",
+//     id: "2",
+//     street: "Cole St",
+//     city: "Surulere",
+//     postalCode: "2222",
+//     country: "Nigeria",
+//     state: "Lagos",
+//     phoneNumber: "222222222222",
+//   },
+//   orderId: "888888",
+//   orderDate: "20/12/24",
+// };
 
 export default OrderReceivedEmail;
 
