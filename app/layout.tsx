@@ -4,6 +4,7 @@ import Providers from "@/components/Providers";
 import { Toaster } from "@/components/ui/toaster";
 import type { Metadata } from "next";
 import { Recursive } from "next/font/google";
+import { AuthProvider } from "./AuthProvider";
 import "./globals.css";
 
 const recursive = Recursive({ subsets: ["latin"] });
@@ -19,19 +20,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={recursive.className}>
-        <Navbar />
+    <AuthProvider>
+      <html lang="en">
+        <body className={recursive.className}>
+          <Navbar />
 
-        <main className="flex flex-col min-h-[calc(100vh-3.5rem-1px)] grainy-light">
-          <div className="flex-1 flex flex-col h-full">
-            <Providers>{children}</Providers>
-          </div>
-          <Footer />
-        </main>
+          <main className="flex flex-col min-h-[calc(100vh-3.5rem-1px)] grainy-light">
+            <div className="flex-1 flex flex-col h-full">
+              <Providers>{children}</Providers>
+            </div>
+            <Footer />
+          </main>
 
-        <Toaster />
-      </body>
-    </html>
+          <Toaster />
+        </body>
+      </html>
+    </AuthProvider>
   );
 }
