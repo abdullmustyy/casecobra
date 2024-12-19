@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
-    "build": "bun pm cache rm && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "preinstall": "bun pm cache rm",
     "postinstall": "prisma generate"
   },
   "dependencies": {
