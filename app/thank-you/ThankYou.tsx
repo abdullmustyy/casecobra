@@ -5,7 +5,7 @@ import { toast } from "@/components/ui/use-toast";
 import { formatPrice } from "@/lib/utils";
 import { useQuery } from "@tanstack/react-query";
 import { Loader2 } from "lucide-react";
-import { useSearchParams } from "next/navigation";
+import { notFound, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { getPaymentStatus } from "./actions";
 
@@ -81,10 +81,10 @@ const ThankYou = () => {
               You made a great choice!
             </h4>
             <p className="mt-2 text-sm text-zinc-600">
-              We at CaseCobra believe that a phone case doesn&apos;t only need to
-              look good, but also last you for the years to come. We offer a
-              5-year print guarantee: If you case isn&apos;t of the highest quality,
-              we&apos;ll replace it for free.
+              We at CaseCobra believe that a phone case doesn&apos;t only need
+              to look good, but also last you for the years to come. We offer a
+              5-year print guarantee: If you case isn&apos;t of the highest
+              quality, we&apos;ll replace it for free.
             </p>
           </div>
         </div>
