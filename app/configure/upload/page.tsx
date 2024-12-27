@@ -9,14 +9,9 @@ import {
   Image as LucideImage,
   MousePointerSquareDashed,
 } from "lucide-react";
-import type { Metadata } from "next";
 import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 import Dropzone, { FileRejection } from "react-dropzone";
-
-export const metadata: Metadata = {
-  title: "Upload Image",
-};
 
 const Page = () => {
   const { toast } = useToast();
