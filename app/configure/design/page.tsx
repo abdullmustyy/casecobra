@@ -1,10 +1,15 @@
 import { db } from "@/db";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import DesignConfigurator from "./DesignConfigurator";
 
 interface PageProps {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
+
+export const metadata: Metadata = {
+  title: "Design Configurator",
+};
 
 const Page = async ({ searchParams }: PageProps) => {
   const { id } = await searchParams;

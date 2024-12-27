@@ -5,7 +5,7 @@ import { toast } from "@/components/ui/use-toast";
 import { formatPrice } from "@/lib/utils";
 import { useQuery } from "@tanstack/react-query";
 import { Loader2 } from "lucide-react";
-import { notFound, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { getPaymentStatus } from "./actions";
 

@@ -9,9 +9,33 @@ import "./globals.css";
 
 const recursive = Recursive({ subsets: ["latin"] });
 
+const title = "Casecobra";
+const description = "Your Image on a Custom Phone Case.";
+
 export const metadata: Metadata = {
-  title: "Casecobra",
-  description: "Your Image on a Custom Phone Case.",
+  title: {
+    default: title,
+    template: `%s | ${title}`,
+  },
+  description,
+  generator: "Next.js",
+  applicationName: "Casecobra",
+  referrer: "origin-when-cross-origin",
+  keywords: ["Next.js", "React", "JavaScript", "TypeScript", "E-Commerce"],
+  authors: [
+    { name: "Abdullahi Mustafa", url: "https://abdullahimustafa.vercel.app" },
+  ],
+  creator: "Abdullahi Mustafa",
+  // publisher: "Sebastian Markbåge",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({
