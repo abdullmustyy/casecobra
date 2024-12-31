@@ -3,6 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
+import CustomLoader from "../CustomLoader";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
@@ -64,13 +65,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {isLoading && loadingText ? loadingText : children}
-        {isLoading ? (
-          <span className="ml-1.5 flex items-center gap-1">
-            <span className="animate-flashing w-1 h-1 bg-white rounded-full inline-block" />
-            <span className="animate-flashing delay-100 w-1 h-1 bg-white rounded-full inline-block" />
-            <span className="animate-flashing delay-200 w-1 h-1 bg-white rounded-full inline-block" />
-          </span>
-        ) : null}
+        {isLoading ? <CustomLoader /> : null}
       </Comp>
     );
   }

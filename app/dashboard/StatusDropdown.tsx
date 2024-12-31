@@ -1,5 +1,6 @@
 "use client";
 
+import CustomLoader from "@/components/CustomLoader";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -29,7 +30,7 @@ const StatusDropdown = ({
 }) => {
   const router = useRouter();
 
-  const { mutate } = useMutation({
+  const { mutate, isPending } = useMutation({
     mutationKey: ["change-order-status"],
     mutationFn: changeOrderStatus,
     onSuccess: () => router.refresh(),
@@ -43,7 +44,11 @@ const StatusDropdown = ({
           className="w-52 flex justify-between items-center"
         >
           {LABEL_MAP[orderStatus]}
-          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+          {isPending ? (
+            <CustomLoader className="[&>span]:bg-primary" />
+          ) : (
+            <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+          )}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="p-0">
