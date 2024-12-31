@@ -20,6 +20,7 @@ import { formatPrice } from "@/lib/utils";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { notFound } from "next/navigation";
 import StatusDropdown from "./StatusDropdown";
+
 const Page = async () => {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
