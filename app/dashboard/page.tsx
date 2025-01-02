@@ -18,8 +18,13 @@ import {
 import { db } from "@/db";
 import { formatPrice } from "@/lib/utils";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import StatusDropdown from "./StatusDropdown";
+
+export const metadata: Metadata = {
+  title: "Dashboard",
+};
 
 const Page = async () => {
   const { getUser } = getKindeServerSession();

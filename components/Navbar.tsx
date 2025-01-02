@@ -4,7 +4,6 @@ import {
   LogoutLink,
   RegisterLink,
 } from "@kinde-oss/kinde-auth-nextjs/server";
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import { buttonVariants } from "./ui/button";
@@ -16,7 +15,7 @@ const Navbar = async () => {
   const isAdmin = user?.email === process.env.ADMIN_EMAIL;
 
   return (
-    <nav className="sticky z-[100] h-14 inset-x-0 top-0 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
+    <nav className="sticky z-50 h-14 inset-x-0 top-0 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
       <MaxWidthWrapper>
         <div className="flex h-14 items-center justify-between border-b border-zinc-200">
           <Link href={"/"} className="flex z-40 font-semibold">
@@ -55,7 +54,6 @@ const Navbar = async () => {
                   })}
                 >
                   Create case
-                  <ArrowRight className="size-5 ml-1.5" />
                 </Link>
               </>
             ) : (
@@ -88,7 +86,6 @@ const Navbar = async () => {
                   })}
                 >
                   Create case
-                  <ArrowRight className="size-5 ml-1.5" />
                 </Link>
               </>
             )}
