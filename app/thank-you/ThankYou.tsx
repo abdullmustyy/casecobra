@@ -34,7 +34,7 @@ const ThankYou = () => {
     return (
       <div className="w-full mt-24 flex justify-center">
         <div className="flex flex-col items-center gap-2">
-          <Loader2 className="h-8 w-8 animate-spin text-zinc-500" />
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
           <h3 className="font-semibold text-xl">Loading your order...</h3>
           <p>This won&apos;t take long.</p>
         </div>

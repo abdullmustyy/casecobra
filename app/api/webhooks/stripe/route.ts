@@ -7,6 +7,7 @@ import { Resend } from "resend";
 import Stripe from "stripe";
 
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL!;
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
