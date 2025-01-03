@@ -9,7 +9,7 @@ import "./globals.css";
 
 const recursive = Recursive({ subsets: ["latin"] });
 
-const title = "Casecobra";
+const title = "CaseCobra";
 const description = "Your Image on a Custom Phone Case.";
 
 export const metadata: Metadata = {

@@ -40,7 +40,11 @@ const OrderReceivedEmail = ({
               width="65"
               height="73"
               alt="delivery snake"
-              style={{ margin: "auto" }}
+              style={{
+                margin: "auto",
+                pointerEvents: "none",
+                userSelect: "none",
+              }}
             />
             <Heading style={global.heading}>Thank you for your order!</Heading>
             <Text style={global.text}>
@@ -91,7 +95,7 @@ const OrderReceivedEmail = ({
             </Row>
             <Row>
               <Text style={footer.text}>
-                © CaseCobra, Inc. All Rights Reserved.
+                &copy; CaseCobra, Inc. All Rights Reserved.
               </Text>
             </Row>
           </Section>
@@ -101,20 +105,20 @@ const OrderReceivedEmail = ({
   );
 };
 
-// OrderReceivedEmail.PreviewProps = {
-//   shippingAddress: {
-//     name: "42a, Cole street, Ojuelegba, Surulere",
-//     id: "2",
-//     street: "Cole St",
-//     city: "Surulere",
-//     postalCode: "2222",
-//     country: "Nigeria",
-//     state: "Lagos",
-//     phoneNumber: "222222222222",
-//   },
-//   orderId: "888888",
-//   orderDate: "20/12/24",
-// };
+OrderReceivedEmail.PreviewProps = {
+  shippingAddress: {
+    name: "42a, Cole street, Ojuelegba, Surulere",
+    id: "2",
+    street: "Cole St",
+    city: "Surulere",
+    postalCode: "2222",
+    country: "Nigeria",
+    state: "Lagos",
+    phoneNumber: "222222222222",
+  },
+  orderId: "888888",
+  orderDate: "20/12/24",
+};
 
 export default OrderReceivedEmail;
 
