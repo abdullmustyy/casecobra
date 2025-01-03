@@ -11,6 +11,7 @@ const recursive = Recursive({ subsets: ["latin"] });
 
 const title = "CaseCobra";
 const description = "Your Image on a Custom Phone Case.";
+const image = "/thumbnail.png";
 
 export const metadata: Metadata = {
   title: {
@@ -34,6 +35,18 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
+    images: [
+      {
+        url: image,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [image],
+    creator: "@abdullmustyy",
   },
 };
 
