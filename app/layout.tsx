@@ -26,7 +26,6 @@ export const metadata: Metadata = {
     { name: "Abdullahi Mustafa", url: "https://abdullahimustafa.vercel.app" },
   ],
   creator: "Abdullahi Mustafa",
-  // publisher: "Sebastian Markbåge",
   formatDetection: {
     email: false,
     address: false,
