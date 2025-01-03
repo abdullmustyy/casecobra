@@ -11,7 +11,7 @@ const Phone = ({ className, imgSrc, dark = false, ...props }: PhoneProps) => {
   return (
     <div
       className={cn(
-        "relative pointer-events-none z-50 overflow-hidden",
+        "relative pointer-events-none z-40 overflow-hidden",
         className
       )}
       {...props}
