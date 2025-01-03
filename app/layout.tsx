@@ -11,7 +11,8 @@ const recursive = Recursive({ subsets: ["latin"] });
 
 const title = "CaseCobra";
 const description = "Your Image on a Custom Phone Case.";
-const image = "/thumbnail.png";
+const url = "https://abdul-casecobra.vercel.app";
+const image = `${url}/thumbnail.png`;
 
 export const metadata: Metadata = {
   title: {
@@ -32,21 +33,23 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  icons: ["/icon.png"],
   openGraph: {
     title,
     description,
+    url,
+    siteName: "CaseCobra",
     images: [
       {
         url: image,
       },
     ],
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
-    images: [image],
+    images: ["image"],
     creator: "@abdullmustyy",
   },
 };
