@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  icons: ["/icon.png"],
   openGraph: {
     title,
     description,
