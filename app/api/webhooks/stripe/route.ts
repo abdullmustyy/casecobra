@@ -1,14 +1,12 @@
 import { db } from "@/db";
 import OrderReceivedEmail from "@/emails/OrderReceivedEmail";
+import { resend } from "@/lib/resend";
 import { stripe } from "@/lib/stripe";
 import { headers } from "next/headers";
 import { NextResponse } from "next/server";
-import { Resend } from "resend";
 import Stripe from "stripe";
 
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL!;
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+const RESEND_EMAIL = process.env.RESEND_EMAIL!;
 
 export async function POST(req: Request) {
   try {
@@ -77,9 +75,8 @@ export async function POST(req: Request) {
       });
 
       await resend.emails.send({
-        from: `CaseCobra <${ADMIN_EMAIL}>`,
-        // to: [event.data.object.customer_details.email],
-        to: ["abdulmusty03@outlook.com"],
+        from: `CaseCobra <${RESEND_EMAIL}>`,
+        to: [event.data.object.customer_details.email],
         subject: "Thanks for your order!",
         react: OrderReceivedEmail({
           orderId,
