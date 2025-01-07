@@ -94,11 +94,7 @@ export async function POST(req: Request) {
         }),
       });
 
-      return NextResponse.json({
-        result: event,
-        email: { from: RESEND_EMAIL, ...email },
-        ok: true,
-      });
+      return NextResponse.json({ result: event, email, ok: true });
     }
 
     return NextResponse.json({ result: event, ok: true });
