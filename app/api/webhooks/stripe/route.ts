@@ -91,8 +91,8 @@ export async function POST(req: Request) {
           },
         }),
       });
-      
-      console.log("Email: ", email);
+
+      console.log("Email: ", RESEND_EMAIL, email);
     }
 
     return NextResponse.json({ result: event, ok: true });
