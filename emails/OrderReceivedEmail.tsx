@@ -67,7 +67,7 @@ const OrderReceivedEmail = ({
           <Hr style={global.hr} />
           <Section style={global.defaultPadding}>
             <Row style={{ display: "inline-flex gap-16", marginBottom: 40 }}>
-              <Column style={{ width: 170 }}>
+              <Column style={{ width: "fit-content" }}>
                 <Text style={global.paragraphWithBold}>Order Number</Text>
                 <Text style={track.number}>{orderId}</Text>
               </Column>
@@ -116,7 +116,7 @@ const OrderReceivedEmail = ({
 //     state: "Lagos",
 //     phoneNumber: "222222222222",
 //   },
-//   orderId: "888888",
+//   orderId: "cm5n08ifz0001l50308l4cua5",
 //   orderDate: "20/12/24",
 // };
 
