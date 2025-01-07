@@ -4,6 +4,7 @@ import { resend } from "@/lib/resend";
 import { stripe } from "@/lib/stripe";
 import { headers } from "next/headers";
 import { NextResponse } from "next/server";
+import { CreateEmailResponse } from "resend";
 import Stripe from "stripe";
 
 const RESEND_EMAIL = process.env.RESEND_EMAIL!;
@@ -13,6 +14,7 @@ export async function POST(req: Request) {
     const body = await req.text();
     const headersList = await headers();
     const signature = headersList.get("stripe-signature");
+    let email: CreateEmailResponse;
 
     if (!signature) {
       return new Response("Invalid signature", { status: 400 });
@@ -74,7 +76,7 @@ export async function POST(req: Request) {
         },
       });
 
-      const email = await resend.emails.send({
+      email = await resend.emails.send({
         from: `CaseCobra <${RESEND_EMAIL}>`,
         to: [event.data.object.customer_details.email],
         subject: "Thanks for your order!",
@@ -92,7 +94,7 @@ export async function POST(req: Request) {
         }),
       });
 
-      console.log("Email: ", RESEND_EMAIL, email);
+      return NextResponse.json({ result: event, email, ok: true });
     }
 
     return NextResponse.json({ result: event, ok: true });
