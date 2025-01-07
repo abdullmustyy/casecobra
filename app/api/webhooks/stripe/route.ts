@@ -74,7 +74,7 @@ export async function POST(req: Request) {
         },
       });
 
-      await resend.emails.send({
+      const email = await resend.emails.send({
         from: `CaseCobra <${RESEND_EMAIL}>`,
         to: [event.data.object.customer_details.email],
         subject: "Thanks for your order!",
@@ -91,6 +91,8 @@ export async function POST(req: Request) {
           },
         }),
       });
+      
+      console.log("Email: ", email);
     }
 
     return NextResponse.json({ result: event, ok: true });
