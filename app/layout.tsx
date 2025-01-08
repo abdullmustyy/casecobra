@@ -12,9 +12,10 @@ const recursive = Recursive({ subsets: ["latin"] });
 const title = "CaseCobra";
 const description = "Your Image on a Custom Phone Case.";
 const url = "https://abdul-casecobra.vercel.app";
-const image = `${url}/thumbnail.png`;
+const image = "/thumbnail.png";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(url),
   title: {
     default: title,
     template: `%s | ${title}`,
