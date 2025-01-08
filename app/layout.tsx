@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   referrer: "origin-when-cross-origin",
   keywords: ["Next.js", "React", "JavaScript", "TypeScript", "E-Commerce"],
   authors: [
-    { name: "Abdullahi Mustafa", url: "https://abdullahimustafa.vercel.app" },
+    { name: "Abdullahi Mustafa", url: "https://abdullahimustafa.tech" },
   ],
   creator: "Abdullahi Mustafa",
   formatDetection: {
