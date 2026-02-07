@@ -3,10 +3,10 @@
 > Create custom phone cases with your own images — protect your memories, not just your phone.
 
 A modern e-commerce platform that allows users to design and order custom phone cases
-featuring their personal photos. Built with Next.js 15, featuring a drag-and-drop case
+featuring their personal photos. Built with Next.js 16, featuring a drag-and-drop case
 designer, secure payments, and real-time order tracking.
 
-![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)
+![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?logo=typescript)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4-06B6D4?logo=tailwindcss)
@@ -30,7 +30,7 @@ designer, secure payments, and real-time order tracking.
 
 | Category | Technology |
 | ---------- | ------------ |
-| **Framework** | [Next.js 15](https://nextjs.org/) with App Router |
+| **Framework** | [Next.js 16](https://nextjs.org/) with App Router |
 | **Language** | [TypeScript](https://www.typescriptlang.org/) |
 | **Styling** | [Tailwind CSS](https://tailwindcss.com/) |
 | **UI Components** | [Radix UI](https://www.radix-ui.com/), [Headless UI](https://headlessui.com/) |
